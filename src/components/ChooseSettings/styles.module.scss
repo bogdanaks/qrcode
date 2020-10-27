@@ -1,0 +1,81 @@
+.chooseBlock {
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        li {
+            list-style: none;
+            position: relative;
+            width: 40px;
+            height: 40px;
+            button {
+                cursor: pointer;
+            }
+            .borderSet {
+                width: 40px;
+                height: 40px;
+                border: 4px solid #000;
+                border-radius: 10px;
+                &:focus {
+                    outline: none;
+                }
+            }
+            .transparency {
+                width: 40px;
+                height: 40px;
+                border: none;
+                background: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &:focus {
+                    outline: none;
+                }
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+            .btnText {
+                border: none;
+                background: none;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                &:focus {
+                    outline: none;
+                }
+                span {
+                    font-weight: 800;
+                    font-size: 54px;
+                    width: 40px;
+                    height: 40px;
+                    position: absolute;
+                    top: -19px;
+                }
+            }
+        }
+    }
+}
+
+.activeLine {
+    width: 40px;
+    height: 5px;
+    background-color: lightseagreen;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    &.showLine {
+        opacity: 1;
+    }
+}

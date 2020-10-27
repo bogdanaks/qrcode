@@ -5,6 +5,7 @@
     flex-direction: column;
     h2 {
         margin: 20px 0;
+        text-align: center;
     }
     .colorBlock {
         width: 200px;
@@ -22,6 +23,17 @@
             display: flex;
             align-items: center;
             flex-direction: column;
+        }
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .container {
+        flex-direction: column !important;
+        width: 95% !important;
+        .settingsBlock {
+            width: 100% !important;
+            margin-bottom: 40px;
         }
     }
 }

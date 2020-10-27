@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 45%;
     .qrConatinerBlock {
         position: relative;
         .transparentBg {
@@ -41,6 +42,21 @@
                 font-size: 30px;
                 font-weight: 700;
                 z-index: 2;
+            }
+        }
+    }
+}
+@media screen and (max-width: 790px) {
+    .qrWrapper {
+        width: 100% !important;
+        margin-bottom: 40px;
+        .qrConatiner {
+            .qrBlock {
+                width: 300px !important;
+                height: 300px !important;
+            }
+            span {
+                font-size: 16px !important;
             }
         }
     }

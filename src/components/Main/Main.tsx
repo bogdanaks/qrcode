@@ -13,7 +13,7 @@ export const Main: React.FC = () => {
         hex: '#fff',
         rgba: { r: 51, g: 51, b: 51, a: 1 },
     })
-    const [inputValue, setInputValue] = React.useState<string>('vk.com')
+    const [inputValue, setInputValue] = React.useState<string>('https://telegram.im/@bogdanaks')
     const [qrSizeValue, setQrSizeValue] = React.useState<string>('200')
     const [borderValue, setBorderValue] = React.useState<string>('2')
     const [radiusValue, setRadiusValue] = React.useState<string>('2')
@@ -22,7 +22,7 @@ export const Main: React.FC = () => {
 
     return (
         <div className={styles.main}>
-            <h2>Just QR Code</h2>
+            <h2>Simple QR Code generator</h2>
             <div className={styles.container}>
                 <QRBlock
                     fgColor={color.rgba}

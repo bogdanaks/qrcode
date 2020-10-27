@@ -11,4 +11,17 @@
         height: 100px;
         margin-bottom: 20px;
     }
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%;
+        margin-top: 50px;
+        .settingsBlock {
+            width: 45%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
 }

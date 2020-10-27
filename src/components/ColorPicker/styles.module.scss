@@ -1,0 +1,28 @@
+.circles {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    .circle {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transition: all 0.5s ease;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+    .circlePalitra {
+        border-radius: 50%;
+        transition: all 0.5s ease;
+        img {
+            width: 43px;
+            height: 43px;
+        }
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}

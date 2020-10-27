@@ -13,7 +13,9 @@ interface QRBlockProps {
     bgColor: 'transparent' | 'white'
     value: string
     borderSize: number
+    radiusSize: number
     isShowText: boolean
+    qrSize: string
 }
 
 export const QRBlock: React.FC<QRBlockProps> = ({
@@ -21,7 +23,9 @@ export const QRBlock: React.FC<QRBlockProps> = ({
     bgColor,
     value,
     borderSize,
+    radiusSize,
     isShowText,
+    qrSize,
 }) => {
     const qrBlockRef = React.useRef<HTMLDivElement>(null)
 
@@ -41,10 +45,11 @@ export const QRBlock: React.FC<QRBlockProps> = ({
                             borderColor: `rgba(${fgColor.r},${fgColor.g},${fgColor.b},${fgColor.a})`,
                             borderWidth: `${borderSize}px`,
                             borderStyle: 'solid',
+                            borderRadius: `${radiusSize}%`,
                         }}>
                         <QRCode
                             value={value}
-                            size={300}
+                            size={Number(qrSize)}
                             fgColor={`rgba(${fgColor.r},${fgColor.g},${fgColor.b},${fgColor.a})`}
                             bgColor={bgColor}
                             renderAs="svg"

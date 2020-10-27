@@ -14,7 +14,9 @@ export const Main: React.FC = () => {
         rgba: { r: 51, g: 51, b: 51, a: 1 },
     })
     const [inputValue, setInputValue] = React.useState<string>('vk.com')
+    const [qrSizeValue, setQrSizeValue] = React.useState<string>('200')
     const [borderValue, setBorderValue] = React.useState<string>('2')
+    const [radiusValue, setRadiusValue] = React.useState<string>('2')
     const [isShowBg, setIsShowBg] = React.useState<boolean>(false)
     const [isShowText, setIsShowText] = React.useState<boolean>(false)
 
@@ -27,14 +29,20 @@ export const Main: React.FC = () => {
                     bgColor={isShowBg ? 'transparent' : 'white'}
                     value={inputValue}
                     borderSize={Number(borderValue)}
+                    radiusSize={Number(radiusValue)}
                     isShowText={isShowText}
+                    qrSize={qrSizeValue}
                 />
                 <div className={styles.settingsBlock}>
                     <InputLink value={inputValue} setValue={setInputValue} />
                     <ColorPicker color={color} setColor={setColor} />
                     <ChooseSettings
+                        qrSizeValue={qrSizeValue}
+                        setQrSizeValue={setQrSizeValue}
                         borderValue={borderValue}
                         setBorderValue={setBorderValue}
+                        radiusValue={radiusValue}
+                        setRadiusValue={setRadiusValue}
                         isShowText={isShowText}
                         setIsShowText={setIsShowText}
                         isShowBg={isShowBg}

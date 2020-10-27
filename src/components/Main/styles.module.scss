@@ -1,0 +1,14 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h2 {
+        margin: 20px 0;
+    }
+    .colorBlock {
+        width: 200px;
+        height: 100px;
+        margin-bottom: 20px;
+    }
+}

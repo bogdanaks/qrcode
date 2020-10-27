@@ -1,0 +1,47 @@
+.qrWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .qrConatinerBlock {
+        position: relative;
+        .transparentBg {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .whiteBg {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+        }
+        .qrConatiner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 40px;
+            .qrBlock {
+                width: 350px;
+                height: 350px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 2;
+            }
+            span {
+                margin: 5px 0;
+                font-size: 30px;
+                font-weight: 700;
+                z-index: 2;
+            }
+        }
+    }
+}
